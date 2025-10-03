@@ -1,7 +1,10 @@
 /* Reset defaults */
-body {
+html, body {
+    height: 100%;           /* make body full height */
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column; /* arrange children vertically */
 }
 
 /* Navigation header */
@@ -48,11 +51,30 @@ body {
     color: #007bff;
 }
 
+/* Section in the middle */
 .section {
     border: 2px solid black;
     width: 90%;
-    height: 300px;
-    margin: 0 auto;  /* centers the section horizontally */
+    margin: 20px auto;      /* center horizontally and add spacing */
+    flex: 1;                /* take all remaining vertical space */
     display: flex;
     flex-direction: column;
+    justify-content: center; /* center content vertically */
+    align-items: center;     /* center content horizontally */
+}
+
+.kake {
+    width: 50%;
+    text-align: center;
+    border: 1px dashed red; /* just to see the box clearly */
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    height: 52px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    line-height: 52px; /* vertically center text */
 }
