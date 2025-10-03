@@ -71,11 +71,12 @@ html, body {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 .card img {
-    width: 100%;       /* tar maksimalt bredde av kortet */
-    height: auto;      /* beholder proporsjonene */
-    border-radius: 8px; /* valgfritt, avrundede hjørner */
-    display: block;    /* fjerner ekstra inline space under bildet */
-    margin-bottom: 10px; /* litt space mellom bilde og tekst */
+    width: 100%;            /* fill the card's width */
+    height: 200px;          /* fixed height for all images */
+    object-fit: cover;      /* crop image to fill the box nicely */
+    border-radius: 8px;     /* optional rounded corners */
+    display: block;
+    margin-bottom: 10px;
 }
 
 /* Hover effect */
