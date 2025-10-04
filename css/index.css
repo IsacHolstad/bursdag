@@ -49,6 +49,9 @@ html, body {
 
 .heading .nav a:hover {
     color: #007bff;
+    font-weight: bolder;
+    font-size: 18px;
+
 }
 
 /* Section in the middle */
@@ -63,10 +66,12 @@ html, body {
     align-items: center;     /* center content horizontally */
 }
 
-.kake {
-    width: 50%;
-    text-align: center;
-    border: 1px dashed red; /* just to see the box clearly */
+
+
+.bursdagskake {
+    width: 70%;  /* valgfritt – størrelsen på kaken */
+    height: auto;
+
 }
 
 /* Footer */

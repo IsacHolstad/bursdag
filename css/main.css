@@ -49,6 +49,9 @@ html, body {
 
 .heading .nav a:hover {
     color: #007bff;
+    font-weight: bolder;
+    font-size: 18px;
+
 }
 
 .container {
