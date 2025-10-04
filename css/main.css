@@ -118,5 +118,6 @@ html, body {
 .githubIcon {
     width: 32px;
     margin-top: 5px;
+    padding-right: 5px;
     margin-left: auto; /* pushes icon to the right */
 }
