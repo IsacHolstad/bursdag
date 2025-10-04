@@ -54,7 +54,7 @@ html, body {
 }
 
 /* ---------- Hovedseksjon ---------- */
-.section {
+.hovedSeksjon {
     flex: 1;
     display: flex;
     justify-content: center;  /* sentrer horisontalt */
@@ -66,7 +66,7 @@ html, body {
 }
 
 /* ---------- Kake og lys ---------- */
-.cakeBox {
+.kakeBoks {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -114,16 +114,16 @@ html, body {
 }
 
 /* Hover-effekter */
-.cakeBox:hover .lys {
+.kakeBoks:hover .lys {
     opacity: 1;
     transform: translateX(-50%) translateY(-5px);
 }
 
-.cakeBox:hover .hoverText {
+.kakeBoks:hover .hoverText {
     opacity: 1;
 }
 
-.cakeBox:hover .bursdagskake {
+.kakeBoks:hover .bursdagskake {
     transform: scale(1.05);
 }
 
