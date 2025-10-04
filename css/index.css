@@ -56,23 +56,50 @@ html, body {
 
 /* Section in the middle */
 .section {
+    flex: 1;                     /* fyller all ledig plass mellom header og footer */
+    display: flex;
+    justify-content: center;     /* midt horisontalt */
+    align-items: center;         /* midt vertikalt */
     border: 2px solid black;
     width: 90%;
-    margin: 100px auto;      /* center horizontally and add spacing */
-    flex: 1;                /* take all remaining vertical space */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* center content vertically */
-    align-items: center;     /* center content horizontally */
+    margin: 0 auto;              /* senterer selve boksen */
 }
 
+/* Boksen som inneholder kake + tekst */
+.cakeBox {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
 
-
+/* Selve kakebildet */
 .bursdagskake {
-    width: 70%;  /* valgfritt – størrelsen på kaken */
+    width: 70%;
     height: auto;
-
+    display: block;
+    margin: 0 auto;              /* sikrer at bildet sentreres inni boksen */
 }
+
+/* Tekst som vises på hover */
+.hoverText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: purple;
+    background-color: lightgray;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 45px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cakeBox:hover .hoverText {
+    opacity: 1;
+}
+
 
 /* Footer */
 .footer {
