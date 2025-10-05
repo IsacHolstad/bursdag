@@ -154,6 +154,7 @@ html, body {
     vertical-align: middle;
     cursor: pointer;
     padding-right: 5px;
+    padding-bottom: 5px;
     transition: transform 0.3s ease;
 }
 

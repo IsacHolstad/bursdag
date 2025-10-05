@@ -1,20 +1,20 @@
-/* Reset defaults */
+/* ---------- Grunnstruktur og standardinnstillinger ---------- */
 html, body {
-    height: 100%;           /* make body full height */
+    height: 100%;           /* gjør at body dekker hele høyden av vinduet */
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* arrange children vertically */
+    flex-direction: column; /* legger elementer vertikalt (header → innhold → footer) */
 }
 
-/* Navigation header */
+/* ---------- Navigasjonsfelt (header) ---------- */
 .heading {
     background-color: #f8f9fa;
     padding: 12px 20px;
     border-bottom: 1px solid #ccc;
 }
 
-/* Flex container for nav */
+/* Liste med navigasjonslenker */
 .heading .nav {
     list-style: none;
     margin: 0;
@@ -23,18 +23,19 @@ html, body {
     align-items: center;
 }
 
-/* Logo on the left */
+/* Logoen plasseres til venstre */
 .heading .nav .logo {
-    margin-right: auto; /* pushes everything else to the right */
+    margin-right: auto;
 }
 
+/* Selve logo-bildet */
 .heading .logo img {
     display: block;
-    width: 80px;  /* adjust as needed */
+    width: 80px;
     height: auto;
 }
 
-/* Right-side nav items */
+/* Navigasjonslenker til høyre */
 .heading .nav li:not(.logo) {
     margin-left: 18px;
     font-size: 16px;
@@ -47,23 +48,24 @@ html, body {
     display: inline-block;
 }
 
+/* Hover-effekt på lenker i menyen */
 .heading .nav a:hover {
     color: #007bff;
     font-weight: bolder;
     font-size: 18px;
-
 }
 
+/* ---------- Container for kortene ---------- */
 .container {
     display: flex;
-    flex-wrap: wrap;            /* wrap cards on small screens */
-    gap: 20px;                  /* space between cards */
-    justify-content: center;    /* center the cards */
+    flex-wrap: wrap;         /* gjør at kortene brytes på små skjermer */
+    gap: 20px;               /* mellomrom mellom kortene */
+    justify-content: center; /* sentrerer kortene horisontalt */
     padding: 20px;
 }
 
-/* Individual card styling */
-.card {
+/* ---------- Individuelle kort ---------- */
+.kort {
     background-color: #f8f9fa;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -73,36 +75,43 @@ html, body {
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
 }
-.card img {
-    width: 100%;            /* fill the card's width */
-    height: 200px;          /* fixed height for all images */
-    object-fit: cover;      /* crop image to fill the box nicely */
-    border-radius: 8px;     /* optional rounded corners */
+
+/* Bildene i hvert kort */
+.kort img {
+    width: 100%;            /* fyller bredden av kortet */
+    height: 200px;          /* fast høyde for alle bilder */
+    object-fit: cover;      /* beskjærer bildet slik at det fyller boksen pent */
+    border-radius: 8px;     /* runde hjørner */
     display: block;
     margin-bottom: 10px;
 }
 
-/* Hover effect */
-.card:hover {
+/* Hover-effekt på kort */
+.kort:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* Card titles */
-.card h3 {
+/* Tittel i kortet */
+.kort h3 {
     margin-top: 0;
     margin-bottom: 10px;
 }
 
-/* Card content */
-.card p {
-    margin: 0;
+/* Teksten (datoen) i kortet — skjult som standard */
+.kort p {
+    opacity: 0;                 /* usynlig til å begynne med */
+    transition: opacity 0.3s ease; /* myk overgang når den vises */
     color: #555;
+    margin: 0;
 }
 
+/* Viser datoen med en fade-in når man hovrer over kortet */
+.kort:hover p {
+    opacity: 1;
+}
 
-
-/* Footer */
+/* ---------- Footer nederst ---------- */
 .footer {
     width: 100%;
     height: 52px;
@@ -123,9 +132,11 @@ html, body {
     vertical-align: middle;
     cursor: pointer;
     padding-right: 5px;
+    padding-bottom: 5px;
     transition: transform 0.3s ease;
 }
 
+/* Hover-effekt på GitHub-ikonet */
 .githubIcon:hover {
     transform: scale(1.2);
 }
