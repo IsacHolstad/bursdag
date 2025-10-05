@@ -1,4 +1,4 @@
-/* ---------- Reset og grunnstruktur ---------- */
+/* Fjerner standard margin/padding og setter opp grunnoppsett for siden */
 html, body {
     height: 100%;
     margin: 0;
@@ -9,13 +9,14 @@ html, body {
     background-color: #fff;
 }
 
-/* ---------- Header / navigasjon ---------- */
+/* Stil for toppen av siden (meny og logo) */
 .heading {
     background-color: #f8f9fa;
     padding: 12px 20px;
     border-bottom: 1px solid #ccc;
 }
 
+/* Gjør navigasjonslisten horisontal og midtstilt */
 .heading .nav {
     list-style: none;
     margin: 0;
@@ -24,21 +25,25 @@ html, body {
     align-items: center;
 }
 
+/* Flytter logoen til venstre */
 .heading .nav .logo {
-    margin-right: auto; /* plasser logo til venstre */
+    margin-right: auto;
 }
 
+/* Justerer størrelsen på logoen */
 .heading .logo img {
     display: block;
     width: 80px;
     height: auto;
 }
 
+/* Avstand mellom lenkene i menyen */
 .heading .nav li:not(.logo) {
     margin-left: 18px;
     font-size: 16px;
 }
 
+/* Utseende på menylenker */
 .heading .nav a {
     text-decoration: none;
     color: #333;
@@ -47,25 +52,26 @@ html, body {
     transition: all 0.2s ease;
 }
 
+/* Farge og størrelse når man holder over en lenke */
 .heading .nav a:hover {
     color: #007bff;
     font-weight: bold;
     font-size: 17px;
 }
 
-/* ---------- Hovedseksjon ---------- */
+/* Sentrerer innholdet midt på siden */
 .hovedSeksjon {
     flex: 1;
     display: flex;
-    justify-content: center;  /* sentrer horisontalt */
-    align-items: center;      /* sentrer vertikalt */
+    justify-content: center;  /* midt horisontalt */
+    align-items: center;      /* midt vertikalt */
     width: 90%;
     margin: 0 auto;
     position: relative;
     text-align: center;
 }
 
-/* ---------- Kake og lys ---------- */
+/* Plasserer kake og lys midt over hverandre */
 .kakeBoks {
     position: relative;
     display: flex;
@@ -77,7 +83,7 @@ html, body {
     margin: 0 auto;
 }
 
-/* Lys – skjult til hover */
+/* Lys – usynlig til man holder over kaken */
 .lys {
     position: absolute;
     top: -40px;
@@ -100,7 +106,7 @@ html, body {
     z-index: 1;
 }
 
-/* Tekst som dukker opp ved hover */
+/* Tekst som vises når man holder over kaken */
 .hoverText {
     position: absolute;
     top: -70px;
@@ -113,7 +119,7 @@ html, body {
     transition: opacity 0.4s ease-in-out;
 }
 
-/* Hover-effekter */
+/* Hover-effekter – viser lys, tekst og zoomer kaken */
 .kakeBoks:hover .lys {
     opacity: 1;
     transform: translateX(-50%) translateY(-5px);
@@ -127,7 +133,7 @@ html, body {
     transform: scale(1.05);
 }
 
-/* ---------- Footer ---------- */
+/* Fester footer nederst på siden */
 .footer {
     width: 100%;
     height: 52px;
@@ -151,6 +157,7 @@ html, body {
     transition: transform 0.3s ease;
 }
 
+/* Gjør GitHub-ikonet større ved hover */
 .githubIcon:hover {
     transform: scale(1.2);
 }
