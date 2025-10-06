@@ -125,10 +125,12 @@ html, body {
     transform: translateX(-50%) translateY(-5px);
 }
 
+/* Viser teksten når man holder musepekeren over kaken */
 .kakeBoks:hover .hoverText {
     opacity: 1;
 }
 
+/* Gjør at kaken blir litt større når man holder musepekeren over den */
 .kakeBoks:hover .bursdagskake {
     transform: scale(1.05);
 }
